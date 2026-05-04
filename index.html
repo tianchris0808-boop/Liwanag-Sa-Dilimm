@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liwanag sa Dilim</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #111 0%, #000 100%);
+  color: #f5d76e;
+  text-align: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#f5d76e33 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: -1;
+}
+
+.section {
+  max-width: 750px;
+  margin: auto;
+  padding: 70px 20px;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  font-size: 44px;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: #f5d76e55;
+  margin: 20px auto;
+}
+
+.button {
+  display: block;
+  margin: 10px auto;
+  padding: 14px;
+  max-width: 280px;
+  border-radius: 999px;
+  background: #f5d76e;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.small {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="section">
+  <h1>Liwanag sa Dilim</h1>
+  <p class="subtitle">Light in the Darkness</p>
+  <div class="divider"></div>
+  <p>You’ve always been a beacon of light in dark times; may I be one for you?</p>
+
+  <!-- 🎵 MUSIC TOGGLE -->
+  <button class="button" onclick="toggleMusic()" id="musicBtn">🎵 Play Music</button>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2>About</h2>
+  <div class="divider"></div>
+  <p>
+    This program seeks to provide an integration of psychoeducation, emotional, 
+    and social support services in one space that is ethical and professional.
+  </p>
+</section>
+
+<!-- OPTIONS -->
+<section class="section">
+  <h2>Explore</h2>
+  <div class="divider"></div>
+
+  <button class="button" onclick="toggle('relax')">🌙 A Time to Relax</button>
+  <div id="relax" class="hidden">
+    <a class="button" href="https://youtu.be/1Dv-ldGLnIY?si=kPbJB-ITBMnDrR9T" target="_blank">🫁 Breathing Exercise</a>
+    <a class="button" href="https://youtu.be/z6X5oEIg6Ak?si=DvW9Uym9OCQNPh9N" target="_blank">🧘 Meditation</a>
+    <a class="button" href="https://youtu.be/1ZYbU82GVz4?si=5k2OiqAD18ypU0Ws" target="_blank">🎧 Soothing Music</a>
+  </div>
+
+  <button class="button" onclick="toggle('faith')">✨ A Faithful Reminder</button>
+  <div id="faith" class="hidden">
+    <a class="button" href="https://www.bible.com/verse-of-the-day" target="_blank">📖 Verse of the Day</a>
+    <button class="button" onclick="toggle('prayers')">🙏 A Prayer for You</button>
+
+    <div id="prayers" class="hidden">
+      <p><strong>Prayer for Joy</strong><br>
+      Lord, open my eyes to the beauty hiding in ordinary days. Let me find happiness in small things — a kind word, a quiet morning, a moment of peace. Remind me that a simple life, lived with gratitude, is a rich one. Amen.</p>
+
+      <p><strong>Prayer for a Lighter Heart</strong><br>
+      God, I have been carrying so much. Worry, regret, anxiety, disappointment. Today I lay it all down at Your feet. Replace the heaviness in my chest with something lighter — with hope, with laughter, with the quiet joy of knowing I am not alone. Amen.</p>
+
+      <p><strong>Prayer After a Hard Season</strong><br>
+      Father, it has been a long and difficult road. I am tired in ways I cannot fully explain. But I believe that joy comes in the morning, and I am asking You — let my morning come. Restore what has been lost. Renew what has grown weary. Amen.</p>
+    </div>
+  </div>
+
+  <a class="button" href="https://sendthesong.xyz/?fbclid=IwY2xjawQ5VlpleHRuA2FlbQIxMABicmlkETFNb2dVR2V5N2liWmhJZWY1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHsBsPTDXAB2S32iilvFOKwef7vrHNXoOmzh8n2_wkbfSlO2rLuqcMjj6cNpN_aem_EdfXDRb7SKjaZRJ6x4u6Uw" target="_blank">
+    💬 A Wall to Vent Out
+  </a>
+
+  <button class="button" onclick="toggle('pro')">🧑‍⚕️ Ask A Professional</button>
+  <div id="pro" class="hidden">
+    <p><strong>Mr. John Aquilino Napoleon G. Contreras</strong><br>
+    Guidance Information Analyst<br>
+    📧 Jangcontreras@riverside.edu.ph</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+  <h2>Contact</h2>
+  <div class="divider"></div>
+
+  <a class="button" href="https://www.facebook.com/share/14bbKGnjKSy/?mibextid=wwXIfr" target="_blank">
+    📘 Facebook Page
+  </a>
+</section>
+
+<!-- RATE -->
+<section class="section">
+  <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeW0-n0nv7i5IJUhf__ZEx_vHCW-UCzvL6TuHghYUBWwaKKlg/viewform?usp=dialog" target="_blank">
+    ⭐ Rate Us
+  </a>
+
+  <p class="small">© 2026 Liwanag sa Dilim</p>
+</section>
+
+<!-- 🎵 AUDIO -->
+<audio id="bgMusic" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_946e7c9c4d.mp3?filename=calm-ambient-11157.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function toggle(id) {
+  const el = document.getElementById(id);
+  el.style.display = (el.style.display === "block") ? "none" : "block";
+}
+
+/* 🎵 MUSIC CONTROL */
+let isPlaying = false;
+
+function toggleMusic() {
+  const music = document.getElementById("bgMusic");
+  const btn = document.getElementById("musicBtn");
+
+  if (!isPlaying) {
+    music.play();
+    btn.innerText = "⏸ Pause Music";
+  } else {
+    music.pause();
+    btn.innerText = "🎵 Play Music";
+  }
+
+  isPlaying = !isPlaying;
+}
+</script>
+
+</body>
+</html>
